@@ -1,5 +1,5 @@
 .sidebar{
-    background-color: gray;
+    background-color: #94afa4;
     height: 100vh;
 }
 
@@ -9,8 +9,9 @@
 }
 
 .img_logo_sidebar{
-    width: 100%;
- 
+
+    width: 80%;
+    margin-top: 100px;
 
 }
 
@@ -33,7 +34,7 @@
 }
 
 .sub-titulo{
-    color: gray;
+    color: #94afa4;
 }
 
 .input-form{
@@ -46,7 +47,7 @@
 
 .input-form:focus{
 
-    border: 2px solid gray !important;
+    border: 2px solid #94afa4 !important;
     outline: 0 !important;
     box-shadow: none !important;
 
@@ -58,11 +59,12 @@
 
 .btn-first{
 
-    border: none;
+    border: 2px solid #000;
+    border-radius: 5%;
     padding: 5px 15px 5px 15px;
     font-size: 25px;
-    background-color: gray;
-    color: white;
+    background-color: #94afa4;
+    color: black;
     font-weight: bold;
 
 }

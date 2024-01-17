@@ -7,7 +7,7 @@
 
 {% endblock %}
 {% block 'titulo' %}Cadastre-se{% endblock %}
-
+ 
 {% block 'body' %}
     <div class="container-fluid">
         <div class="row">
@@ -28,7 +28,7 @@
                     
                    
                     
-                    <form action="" method="">
+                    <form action="{% url 'cadastro' %}" method="POST"> {% csrf_token %}
                         <span class="bold">Nome de usuário</span>
                         <input class="form-control input-form" name="usuario" type="text" placeholder="Digite seu nome...">
                         <br>
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <br>
-                        <a class="btn btn-outline-success btn-lg" style="background-color: #94afa4; color: black; border: 2px solid #000;"">Registrar</a>
+                        <button class="btn btn-outline-success btn-lg" style="background-color: #94afa4; color: black; border: 2px solid #000;"">Registrar</button> 
 
                     </form>
 

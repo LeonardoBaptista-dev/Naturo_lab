@@ -2,6 +2,9 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .utils import password_is_valid
 from django.contrib.auth.models import User
+from django.contrib.messages import constants
+from django.contrib import messages
+
 
 
 def cadastro(request):
@@ -22,8 +25,10 @@ def cadastro(request):
                                             password=senha,
                                             is_active=False)
             user.save()
+            messages.add_message(request,constants.SUCCESS,'Cadastro efetuado com sucesso')
             return redirect('/auth/logar')
         except:
+            messages.add_message(request,constants.ERROR,'Erro interno do sistema')
             return redirect('/auth/cadastro')
         
                             
